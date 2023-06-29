@@ -1,0 +1,225 @@
+section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 160px;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  max-width: 600px;
+  font-family: 'Karla', sans-serif;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 200;
+  margin: auto auto;
+  color: #4B4B4B;
+
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 2;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-15px);
+  }
+}
+
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-15px);
+  }
+}
+
+section p {
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  max-width: 600px;
+  line-height: 25px;
+  text-align: center;
+  color: #4B4B4B;
+}
+
+button {
+  background-color: #FF559C;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  font-family: 'Karla', sans-serif;
+  border-radius: 100px;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  transition: 1.01s;
+}
+
+button:hover {
+  background-color: #B80150;
+}
+
+#cel {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-top: 120px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#mancha {
+  display: inline-block;
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 70px;
+  width: 760px;
+  animation: go-back 2s infinite alternate;
+}
+
+#celular {
+  position: relative;
+  z-index: 5;
+  left: 90px;
+  width: 300px;
+  animation: go-back2 2s;
+  animation: bounce 1s infinite alternate;
+  -webkit-animation: bounce 1.5s infinite alternate;
+}
+
+#baixar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 5;
+  position: relative;
+  left: 40px;
+  cursor: pointer;
+  animation: go-back2 2s infinite alternate;
+
+}
+
+#baixar img:hover {
+  scale: 1.02;
+  transition: 0.5s;
+}
+
+@keyframes go-back {
+  from {
+    transform: translateX(20px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes go-back2 {
+  from {
+    transform: translateX(-20px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* FAQ */
+
+.text-faq {
+  font-family: 'Karla', sans-serif;
+  font-weight: 600;
+  color: #4B4B4B;
+  text-align: center;
+  justify-content: center;
+}
+
+.faq-heading {
+  border-bottom: #777;
+  padding: 20px 60px;
+}
+
+.faq-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 5;
+  gap: 30px;
+}
+
+.hr-line {
+  width: 60%;
+  height: auto;
+  margin: auto;
+}
+
+/* Botão que abre e fecha o faq*/
+.faq-page {
+  font-family: 'Karla', sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  color: #B80150;
+  cursor: pointer;
+  padding: 25px 20px;
+  width: 900px;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+  margin: auto;
+  line-height: 25px;
+  background-color: #F6F6F6;
+  border-radius: 12px;
+  text-align: start;
+}
+
+.faq-body {
+  margin: auto;
+  width: auto;
+  padding: auto;
+  color: #f9f9f9;
+  font-family: 'Karla', sans-serif;
+  font-size: 5px;
+  background-color: #F6F6F6;
+  border-radius: 12px;
+  text-align: start;
+}
+
+.faq-p {
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: start;
+
+}
+
+.active,
+.faq-page:hover {
+  background-color: #FFCBE1;
+}
+
+/* painel do faq*/
+.faq-body {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+}
